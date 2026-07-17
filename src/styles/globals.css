@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-black font-body antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading uppercase tracking-[0.04em];
+}
+
+::selection {
+  @apply bg-accent text-white;
+}

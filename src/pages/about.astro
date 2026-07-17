@@ -1,0 +1,51 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+import '../styles/globals.css';
+
+const title = 'About | Nandika Soi';
+const description = 'Placeholder about page for Nandika Soi with background and newsletter signup.';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400&f[]=khand@700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header current="/about" />
+    <main class="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
+      <section class="space-y-6">
+        <p class="text-sm uppercase tracking-[0.3em] text-accent">About placeholder</p>
+        <h1 class="max-w-3xl text-4xl sm:text-5xl lg:text-6xl">THIS IS WHERE PETE’S STORY WILL LIVE</h1>
+        <p class="max-w-3xl text-lg leading-8 text-black/75">Use this page to introduce background, influences, achievements, or a short biography. The content is intentionally simple so it can be replaced without needing a redesign.</p>
+      </section>
+
+      <section class="grid gap-8 border-t border-black/10 pt-10 lg:grid-cols-2">
+        <div class="space-y-4">
+          <h2 class="text-2xl sm:text-3xl">Background</h2>
+          <p class="text-lg leading-8 text-black/75">Placeholder copy for experience, education, or notable milestones.</p>
+        </div>
+        <div class="space-y-4">
+          <h2 class="text-2xl sm:text-3xl">Current work</h2>
+          <p class="text-lg leading-8 text-black/75">Placeholder copy for current projects, collaborations, or focus areas.</p>
+        </div>
+      </section>
+
+      <section class="rounded-none border border-black bg-white p-8">
+        <h2 class="mb-4 text-3xl">Stay connected</h2>
+        <p class="mb-6 max-w-2xl text-lg leading-8 text-black/75">Join the weekly newsletter for updates, project notes, and future announcements.</p>
+        <div class="max-w-xl">
+          <NewsletterForm />
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

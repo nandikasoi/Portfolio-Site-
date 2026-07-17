@@ -1,0 +1,48 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import '../styles/globals.css';
+
+const title = 'Projects | Nandika Soi';
+const description = 'Placeholder projects page for Nandika Soi with previews and newsletter signup.';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400&f[]=khand@700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header current="/projects" />
+    <main class="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
+      <section class="space-y-6">
+        <p class="text-sm uppercase tracking-[0.3em] text-accent">Projects placeholder</p>
+        <h1 class="max-w-3xl text-4xl sm:text-5xl lg:text-6xl">SELECTED PROJECTS AND EXPERIMENTS</h1>
+        <p class="max-w-3xl text-lg leading-8 text-black/75">This section will host project highlights. For now each card is a clean placeholder with room for future updates.</p>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-2">
+        <ProjectCard title="Project One" description="Placeholder summary for a meaningful body of work or case study." />
+        <ProjectCard title="Project Two" description="Placeholder summary for another initiative, collaboration, or publication." />
+        <ProjectCard title="Project Three" description="Placeholder summary for an experiment, concept, or ongoing build." />
+        <ProjectCard title="Project Four" description="Placeholder summary for a future release, milestone, or update." />
+      </section>
+
+      <section class="rounded-none border border-black bg-white p-8">
+        <h2 class="mb-4 text-3xl">Subscribe for updates</h2>
+        <p class="mb-6 max-w-2xl text-lg leading-8 text-black/75">Use the form below to capture interest for future launches and monthly notes.</p>
+        <div class="max-w-xl">
+          <NewsletterForm />
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+const { current } = Astro.props;
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+];
+---
+
+<header class="border-b border-black/10">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-8 lg:px-10">
+    <a href="/" class="text-lg font-semibold uppercase tracking-[0.2em]">Nandika Soi</a>
+    <nav aria-label="Primary navigation" class="flex gap-4 text-sm sm:gap-6">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={["transition hover:text-accent", current === link.href && "text-accent font-semibold"]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
