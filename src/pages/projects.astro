@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 import '../styles/globals.css';
 
 const title = 'Projects | Nandika Soi';
-const description = 'Placeholder projects page for Nandika Soi with previews and future launches.';
+const description = 'Highlighted projects focused on cybersecurity, tooling, and portfolio work.';
 ---
 
 <html lang="en">
@@ -22,16 +22,31 @@ const description = 'Placeholder projects page for Nandika Soi with previews and
     <Header current="/projects" />
     <main class="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
       <section class="space-y-6">
-        <p class="text-sm uppercase tracking-[0.3em] text-accent">Projects placeholder</p>
-        <h1 class="max-w-3xl text-4xl sm:text-5xl lg:text-6xl">SELECTED PROJECTS AND EXPERIMENTS</h1>
-        <p class="max-w-3xl text-lg leading-8 text-black/75">This section will host project highlights. For now each card is a clean placeholder with room for future updates.</p>
+        <p class="text-sm uppercase tracking-[0.3em] text-accent">Projects</p>
+        <h1 class="max-w-3xl text-4xl sm:text-5xl lg:text-6xl">Selected work and cybersecurity tooling</h1>
+        <p class="max-w-3xl text-lg leading-8 text-black/75">A curated set of projects that highlights practical software development, portfolio work, and beginner cybersecurity tooling.</p>
       </section>
 
       <section class="grid gap-6 md:grid-cols-2">
-        <ProjectCard title="Project One" description="Placeholder summary for a meaningful body of work or case study." />
-        <ProjectCard title="Project Two" description="Placeholder summary for another initiative, collaboration, or publication." />
-        <ProjectCard title="Project Three" description="Placeholder summary for an experiment, concept, or ongoing build." />
-        <ProjectCard title="Project Four" description="Placeholder summary for a future release, milestone, or update." />
+        <ProjectCard
+          title="Portfolio Website"
+          description="Personal portfolio built using Astro and Tailwind CSS. Clean, responsive, and easy to maintain."
+          tech={[ 'Astro', 'Tailwind', 'Cloudflare Pages' ]}
+          github="https://github.com/placeholder/portfolio"
+          demo="https://example.com"
+        />
+        <ProjectCard
+          title="Cybersecurity Toolkit"
+          description="A collection of Linux utilities and beginner cybersecurity scripts for practice and automation."
+          tech={[ 'Python', 'Linux', 'Bash' ]}
+          github="https://github.com/placeholder/cybersecurity-toolkit"
+        />
+        <ProjectCard
+          title="CTF Writeups"
+          description="A collection of picoCTF solutions and learning notes to develop practical problem-solving skills."
+          tech={[ 'Markdown', 'GitHub', 'Linux' ]}
+          github="https://github.com/placeholder/ctf-writeups"
+        />
       </section>
 
     </main>

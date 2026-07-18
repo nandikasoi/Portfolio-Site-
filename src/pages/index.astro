@@ -1,10 +1,11 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ContactCard from '../components/ContactCard.astro';
 import '../styles/globals.css';
 
 const title = 'Nandika Soi | Portfolio';
-const description = 'Placeholder portfolio site for Nandika Soi with project highlights.';
+const description = 'Modern portfolio focused on cybersecurity, AI, and software development.';
 ---
 
 <html lang="en">
@@ -33,16 +34,22 @@ const description = 'Placeholder portfolio site for Nandika Soi with project hig
         </div>
       </section>
 
-      <section class="grid gap-8 border-t border-black/10 pt-10 lg:grid-cols-[1fr_0.7fr]">
+      <section class="grid gap-8 border-t border-black/10 pt-10 lg:grid-cols-[1fr_0.9fr]">
         <div class="space-y-4">
-          <p class="text-sm uppercase tracking-[0.3em] text-accent">About the work</p>
-          <h2 class="text-3xl sm:text-4xl">A concise, modern profile with room to grow.</h2>
-          <p class="max-w-2xl text-lg leading-8 text-black/75">This section can later explain background, values, or notable achievements. For now it remains intentionally simple and easy to replace.</p>
+          <p class="text-sm uppercase tracking-[0.3em] text-accent">Let’s Connect</p>
+          <h2 class="text-3xl sm:text-4xl">Let’s Build Something Together</h2>
+          <p class="max-w-2xl text-lg leading-8 text-black/75">I’m always excited to connect with people interested in cybersecurity, AI, open-source projects, hackathons, and technology. Whether you have an idea, a collaboration, or just want to say hello, feel free to reach out.</p>
         </div>
-        <div class="flex flex-col justify-center gap-4">
-          <a href="/projects" class="inline-flex items-center justify-center bg-accent px-6 py-3 text-center font-semibold uppercase tracking-[0.15em] text-white transition hover:opacity-90">View Projects</a>
-          <a href="/about" class="inline-flex items-center justify-center border border-black px-6 py-3 text-center font-semibold uppercase tracking-[0.15em] transition hover:bg-black hover:text-white">Read About</a>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <ContactCard href="mailto:your-email@example.com" label="Email" subtitle="your-email@example.com" icon="📧" />
+          <ContactCard href="https://github.com/placeholder" label="GitHub" subtitle="github.com/nandika" icon="💻" />
+          <ContactCard href="https://linkedin.com/in/placeholder" label="LinkedIn" subtitle="linkedin.com/in/nandika" icon="🔗" />
+          <ContactCard href="https://instagram.com/placeholder" label="Instagram" subtitle="@nandikay" icon="📷" />
         </div>
+      </section>
+
+      <section class="flex flex-col items-start gap-4 border-t border-black/10 pt-10">
+        <a href="/about#contact" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white transition hover:opacity-90">Contact Me</a>
       </section>
     </main>
     <Footer />
